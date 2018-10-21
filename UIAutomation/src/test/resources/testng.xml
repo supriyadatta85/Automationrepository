@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TrUNC Automation Suite Latest" parallel="none" verbose="1">
+
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+      <listener class-name="com.main.config.CustomListner"/>
+</listeners>
+
+  <test name="TrUNC Automation Test Cases - Open and Login Application" >		
+    <classes>
+      <class name="com.test.trunc.LoginApplication">
+      <methods>
+      	<include name = "openApplication" />
+      </methods>
+      </class>
+     </classes>
+  </test>
+  
+  
+  <test name="TrUNC Automation Test Cases - Create Switch from Switch Search" >		
+    <classes>
+      <class name="com.test.switch1.AddSwitch">
+      <methods>
+      	<include name = "addSwitch" />
+      </methods>
+      </class>
+     </classes>
+  </test>
+  
+  
+  <test name="TrUNC Automation Test Cases - LogOut Application" >		
+    <classes>
+      <class name="com.test.trunc.LogOutApplication">
+      <methods>
+      	<include name = "logOutApplication" />
+      </methods>
+      </class>
+     </classes>
+  </test> 
+  
+  
+    <test name = "TrUNC Automation Test Cases - Login Validation">
+  	<classes>
+      <class name="com.test.login.LoginValidation">
+      	<methods>
+      		<include name = "loginValidation" />
+      		<exclude name = "HomePageScreen" />
+      	</methods>
+      </class>
+     </classes>
+  </test>
+  
+  
+  <test name = "TrUNC Automation Test Cases - Close Application">
+  	<classes>
+      <class name="com.main.testbase.TestBase">
+      	<methods>
+      		<include name = "tearDown" />
+      	</methods>
+      </class>
+     </classes>
+  </test>
+ 
+</suite>
