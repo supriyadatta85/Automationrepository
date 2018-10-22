@@ -173,7 +173,7 @@ import java.text.SimpleDateFormat;
 				else
 				{
 					//strTestDataFilePathTemp = ConfigFile.strTestDataFilePath;
-					strTestDataFilePathTemp = "C:\\TrUNCTestResults\\TrUNCTestResults.xls";
+					strTestDataFilePathTemp = "C:\\UIAutomationResults\\UIAutomationTestResults.xls";
 				}
 				
 				//Create a object of File class to open xlsx file
